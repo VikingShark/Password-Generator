@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <title>Villiam's Password Generator</title>
+  </head>
+  <body class="create-flexbox center-in-flexbox">
+    <main class="container create-flexbox center-in-flexbox flex-direction-column">
+      <h1>Password Generator</h1>
+
+      <div class="section-container1 create-flexbox center-in-flexbox">
+        <p id="password" class="password">Generate a password</p>
+        <svg class="cursor-pointer";
+          xmlns="http://www.w3.org/2000/svg"
+          width="35.373"
+          height="43.56"
+          viewBox="0 0 35.373 43.56"
+          class="svg"
+          id="svg"
+        >
+          <g id="copy" transform="translate(-1428.197 -707.762)">
+            <path
+              id="Path_267"
+              data-name="Path 267"
+              d="M17657.32,370.466h18.391v6.666h-25.152V343.97h6.762v26.5Z"
+              transform="translate(-16220.861 372.69)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+            <path
+              id="Path_268"
+              data-name="Path 268"
+              d="M17702.658,341.5h7.041l-.031-21.33h-12V307.46h-13.541v7.229"
+              transform="translate(-16247.628 401.802)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+            <path
+              id="Path_270"
+              data-name="Path 270"
+              d="M18009.23,292.46l11.969,12.76"
+              transform="translate(-16559.133 416.802)"
+              fill="none"
+              stroke="#a638f6"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <div style="padding-bottom: 25px;" class="section-container2 create-flexbox center-in-flexbox flex-direction-column">
+        <div class="slider-container create-flexbox center-in-flexbox flex-direction-column">
+          <div class="slider-info create-flexbox center-in-flexbox">
+            <p>Character Length</p>
+            <div id="psw-length"></div>
+          </div>
+          <input type="range" min="0" max="20" value="10" step="1" id="range" class="slider"/>
+        </div>
+
+        <form action="" class="form-section flex-direction-column">
+          <div style="gap: 0px 10px;" class="create-flexbox align-items">
+            <input type="checkbox" id="checkbox1" class="checkbox-style checkbox-size cursor-pointer" checked/>
+            <label for="checkbox1" class="text-12px cursor-pointer">Include Uppercase Letters</label>
+          </div>
+          <div style="gap: 0px 10px;" class="create-flexbox align-items">
+            <input type="checkbox" id="checkbox2" class="checkbox-style checkbox-size cursor-pointer" checked/>
+            <label for="checkbox2" class="text-12px cursor-pointer">Include Lowercase Letters</label>
+          </div>
+          <div style="gap: 0px 10px;" class="create-flexbox align-items">
+            <input type="checkbox" id="checkbox3" class="checkbox-style checkbox-size cursor-pointer" checked/>
+            <label for="checkbox3" class="text-12px cursor-pointer">Include Numbers</label>
+          </div>
+          <div style="gap: 0px 10px;" class="create-flexbox align-items">
+            <input type="checkbox" id="checkbox4" class="checkbox-style checkbox-size cursor-pointer" checked/>
+            <label for="checkbox4" class="text-12px cursor-pointer">Include Symbols</label>
+          </div>
+        </form>
+
+        <div class="password-strength create-flexbox center-in-flexbox">
+          <p class="text-12px">Strength</p>
+          <div class="strength-meeter create-flexbox center-in-flexbox">
+            <div id="strength-text" class="text-12px"> </div>
+
+            <div class="staple-container create-flexbox center-in-flexbox">
+              <div class="staple" id="staple1"></div>
+              <div class="staple" id="staple2"></div>
+              <div class="staple" id="staple3"></div>
+              <div class="staple" id="staple4"></div>
+              <div class="staple" id="staple5"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="gen-psw-btn">Generate</button>
+      </div>
+
+      <img src="/images/techover-logo.png" alt="Techover Logo" />
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
